@@ -160,11 +160,10 @@ source ~/.bashrc
 ## GIT SETUP
 
 ### Basic Configuration
-> Inside WSL in Ubuntu `CMD`
+> Inside WSL in Ubuntu `CMD`\
 > You may want to use your github `EMAIL`
 > - Go to GitHub → Settings → Emails
-> - Look for something like:
-> - your-github-username@users.noreply.github.com
+> - Look for something like: your-github-username@users.noreply.github.com
 ```bash
 # Set username and email
 git config --global user.name "name"
@@ -183,15 +182,17 @@ cat ~/.gitconfig
 
 # Set default branch name
 git config --global init.defaultBranch master
+# Set main for GitHub
+git config --global init.defaultBranch main
 ```
 
 ### Configuration Levels
 Git has four configuration levels, each overriding the previous one:
 
-1. **System** (`/etc/gitconfig`): Configures Git for all users on the system
-2. **Global** (`~/.gitconfig`): Configures Git for all projects of a user
-3. **Local** (`.git/config`): Configures Git for a specific project
-4. **Worktree** (`.git/config.worktree`): Configures Git for part of a project
+1. **System** (`/etc/gitconfig`): configures Git for all users on the system
+2. **Global** (`~/.gitconfig`): configures Git for all projects of a user
+3. **Local** (`.git/config`): configures Git for a specific project
+4. **Worktree** (`.git/config.worktree`): configures Git for part of a project
 
 ### Creating and Managing a Repository
 ```bash
@@ -204,7 +205,7 @@ git init
 git status
 ```
 
-### Understanding File States
+#### Understanding File States
 - **Untracked**: Not being tracked by Git
 - **Staged**: Marked for inclusion in the next commit
 - **Committed**: Saved to the repository's history
@@ -236,8 +237,11 @@ git log -n 5 --no-pager
 
 ### Working with Remotes
 ```bash
-# Add a remote repository
+# Add a remote repository FOR GITHUB CLI
 git remote add origin https://github.com/username/repository.git
+
+# Add a remote repository FOR GIT
+git remote add origin git@github.com:username/repository.git
 
 # Push to remote repository
 git push -u origin master
@@ -247,9 +251,9 @@ git pull origin master
 ```
 
 ## NEOVIM
-> **Note**: for clarity, all the shortcuts and keymaping will be inside the file name
+> **Note**: for clarity, all the shortcuts and keymaping will be inside [`keymaps.txt`](#keymaps.txt)
 
-### Basic Usage
+**Basic Usage**
 
 #### Starting Neovim
 ```bash
@@ -263,15 +267,15 @@ nvim filename.md
 nvim -p file1.md file2.md file3.md
 ```
 
-#### Essential
+#### Essential Mods
 
-Neovim operates in different modes:
+> Neovim operates in different modes:
 
-**Normal Mode** 'n' (default when you open Neovim):
+- **Normal Mode** 'n' (default when you open Neovim)
 
-**Insert Mode** 'i' (for typing text):
+- **Insert Mode** 'i' (for typing text)
 
-**Command Mode** ':' (accessing by pressing esc and then :)
+- **Command Mode** ':' (accessing by pressing esc and then ':')
 
 ### Setting Up Neovim Configuration
 
