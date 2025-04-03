@@ -4,7 +4,7 @@
 ## Contents table:
 > You can skip parts, it is mostly for `first-timer`
 * [WSL SETUP](#wsl-setup) `Windows Subsystem for Linux`
-* [QUICK TRICK FOR WSL USERS](#quick-trick-for-wsl-users)
+* [QUICK TRICK FOR WSL USERS](#quick-access-to-wsl-files)
 * [GIT SETUP](#git-setup)
 * [NEOVIM](#neovim)
 
@@ -43,6 +43,7 @@ ls -a
 
 ### Quick Access to WSL Files
 Create a shortcut at: `C:/Windows/System32/wsl.exe ~`
+- inside WSL command line
 
 ### Create Script to Open WSL in File Explorer
 ```bash
@@ -78,6 +79,17 @@ nvim --version
 ### Programming Languages and Dependencies
 
 Neovim and its plugins often require additional programming languages and tools. Here's what you might need:
+
+#### Lua (for Neovim configuration)
+```bash
+# Install Lua and LuaRocks
+sudo apt install luarocks
+
+```
+
+### Additional Tools for Development
+
+> **Note**: You don't need to install all of these languages and tools at once. Start with the ones needed for your immediate tasks, and add others as needed.
 
 #### Python
 ```bash
@@ -138,17 +150,6 @@ sudo mv zig-linux-x86_64-0.11.0 /usr/local/zig
 echo 'export PATH=$PATH:/usr/local/zig' >> ~/.bashrc
 source ~/.bashrc
 ```
-
-#### Lua (for Neovim configuration)
-```bash
-# Install Lua and LuaRocks
-sudo apt install luarocks
-
-```
-
-### Additional Tools for Development
-
-> **Note**: You don't need to install all of these languages and tools at once. Start with the ones needed for your immediate tasks, and add others as needed.
 
 ## GIT SETUP
 
@@ -234,7 +235,7 @@ git push -u origin master
 git pull origin master
 ```
 
-## NEOWIN
+## NEOVIN
 > **Note**: for clarity, all the shortcuts and keymaping will be inside the file name
 
 ### Basic Usage
