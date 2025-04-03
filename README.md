@@ -1,10 +1,12 @@
 # NewbieVim
-## STEP BY STEP for newbies on NEOVIM and UBUNTU
+## STEP BY STEP NEOVIM & UBUNTU GUIDE
+- Do not copy-paste comments in command line
 
 ## Contents table:
 > You can skip parts, it is mostly for `first-timer`
 * [WSL SETUP](#wsl-setup) `Windows Subsystem for Linux`
 * [QUICK TRICK FOR WSL USERS](#quick-access-to-wsl-files)
+* [PREREQUISITES](#prerequisites)
 * [GIT SETUP](#git-setup)
 * [NEOVIM](#neovim)
 
@@ -12,6 +14,7 @@
 Windows Subsystem for Linux allows you to run a Linux environment directly on Windows without a virtual machine.
 
 ### Installation
+> Open windows command-line shell `CMD`
 ```bash
 # Check existing WSL distributions
 wsl --list --verbose
@@ -30,6 +33,7 @@ sudo apt update && sudo apt upgrade
 ```
 
 ### Navigation and Setup Tips
+> Inside WSL in Ubuntu `CMD`
 ```bash
 # Return to home directory
 cd ~
@@ -43,9 +47,9 @@ ls -a
 
 ### Quick Access to WSL Files
 Create a shortcut at: `C:/Windows/System32/wsl.exe ~`
-- inside WSL command line
 
 ### Create Script to Open WSL in File Explorer
+> Inside WSL in Ubuntu `CMD`
 ```bash
 # Create the script
 echo 'explorer.exe .' > ~/open-home.sh
@@ -62,6 +66,7 @@ chmod +x ~/open-home.sh
 Before we begin setting up Neovim and Git, we need to install some essential tools and dependencies.
 
 ### Basic Tools Installation
+> Inside WSL in Ubuntu `CMD`
 ```bash
 # Update package lists
 sudo apt update
@@ -77,6 +82,7 @@ nvim --version
 ```
 
 ### Programming Languages and Dependencies
+> Inside WSL in Ubuntu `CMD`
 
 Neovim and its plugins often require additional programming languages and tools. Here's what you might need:
 
@@ -154,6 +160,11 @@ source ~/.bashrc
 ## GIT SETUP
 
 ### Basic Configuration
+> Inside WSL in Ubuntu `CMD`
+> You may want to use your github `EMAIL`
+> - Go to GitHub → Settings → Emails
+> - Look for something like:
+> - your-github-username@users.noreply.github.com
 ```bash
 # Set username and email
 git config --global user.name "name"
@@ -194,12 +205,12 @@ git status
 ```
 
 ### Understanding File States
-Git files can be in different states:
 - **Untracked**: Not being tracked by Git
 - **Staged**: Marked for inclusion in the next commit
 - **Committed**: Saved to the repository's history
 
 ### Committing Changes
+> Inside WSL in Ubuntu `CMD`
 ```bash
 # Add specific file to staging
 git add filename.txt
@@ -235,7 +246,7 @@ git push -u origin master
 git pull origin master
 ```
 
-## NEOVIN
+## NEOVIM
 > **Note**: for clarity, all the shortcuts and keymaping will be inside the file name
 
 ### Basic Usage
