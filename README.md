@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # NewbieVim
-=======
 ## STEP BY STEP for newbies on NEOVIM and UBUNTU
 
 ## Contents table:
@@ -277,4 +275,3 @@ touch ~/.config/nvim/init.vim
 touch ~/.config/nvim/init.lua
 ```
 
->>>>>>> bfe89b4 (initial commit)
