@@ -8,24 +8,167 @@ $ - Move to end of line
 gg - Go to first line
 G - Go to last line
 dd - Delete (cut) current line
+D - Delete from the cursor to thhe end of the line
+C - Change from the cursor to the end of the line and enter insert mode
+cw - Change from cursor to end of word and enter insert mode
+cb - Change from cursor to beginning of word and enter insert mode
 yy - Yank (copy) current line
 p - Paste after cursor
 u - Undo
 Ctrl+r - Redo
 
+Visual Mode Commands
+
+v - Enter Visual mode and select text character by character
+V - Enter visual mode and select text line by line
+y - Yank (copy) the selected line
+d - Delete the selected text
+c - Change the selected text and enter insert mode
+
+
 Insert Mode (for typing text):
 
 i - Enter insert mode before cursor
 a - Enter insert mode after cursor
+I - Enter insert mode at beginning of the line
+A - Enter insert mode at the end of the line
 o - Open new line below and enter insert mode
 O - Open new line above and enter insert mode
 Esc - Return to normal mode
 
 Command Mode:
 
+:e filename - Open file for editing
 :w - Save (write) file
+:w filename - Save current buffer to filename
 :q - Quit
 :wq or :x - Save and quit
 :q! - Quit without saving
+:wa - Save all open buffers to disk
 :help - Open help
 :set number - Show line numbers
+
+^ Move cursor to first non-whitespace character of line
+$ move cursor to end of line 
+
+Search and Replace:
+
+/ - Search forward for a pattern
+? - Search backward for a pattern
+n - Repeat the last search in the same direction
+N - Repeat the last search in the opposite direction
+:%s/pattern/replacement/g - Replace all occurrences of 'pattern' with 'replacement' in the entire file
+
+Macros and Registers:
+
+qa - Start recording a macro in register 'a'
+q - Stop recording a macro
+@a - Execute the macro stored in register 'a'
+" - Access a specific register
+"ay - Yank into register "a"
+
+Splits and Tabs:
+
+:sp - Split the window horizontally
+:vsp - Split the window vertically
+:tabe - Create a new tab
+:tabn - Go to the next tab
+:tabp - Go to the previous tab
+
+FOR 'n':
+<C-L> - Move focus to the right window
+<C-W>d - Show diagnostics under the cursor
+<C-W><C-D> - Show diagnostics under the cursor
+<C-H> - Move focus to the left window
+<C-J> - Move focus to the lower window
+<C-K> - Move focus to the upper window
+<Plug>(MatchitNormalForward) - :<C-U>call matchit#Match_wrapper('',1,'n')<CR>
+<Plug>(MatchitNormalBackward) - :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+<Plug>(MatchitNormalMultiBackward) - :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+<Plug>(MatchitNormalMultiForward) - :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+<Plug>PlenaryTestFile - :lua require('plenary.test_harness').test_file(vim.fn.expand("%:p"))<CR>
+<Plug>luasnip-delete-check - LuaSnip: Removes current snippet from jumplist 
+<Plug>luasnip-expand-repeat - LuaSnip: Repeat last node expansion
+sa - Add surrounding
+sd - Delete surrounding
+sr - Replace surrounding
+sf - Find right surrounding
+sF - Find left surrounding
+sh - Highlight surrounding
+sn - Update `MiniSurround.config.n_lines`
+sdl - Delete previous surrounding
+srl - Replace previous surrounding
+sfl - Find previous right surrounding
+sFl - Find previous left surrounding
+shl - Highlight previous surrounding
+sdn - Delete next surrounding
+srn - Replace next surrounding
+sfn - Find next right surrouding
+sFn - Find next left surrounding
+shn - Highlight next surrounding
+gx - Opens filepath or URI under cursor with the system handler (file explorer, browser, ...)
+gc - Toggle comment 
+gcc - Toggle comment line
+grn - vim.lsp.buf.rename()
+gra - vim.lsp.buf.code_action()
+grr - vim.lsp.buf.references()
+gri - vim.lsp.buf.implementation()
+gO - vim.lsp.buf.document_symbol()
+g[ - Move to left "around"
+g] - Move to right "around"
+g% - <Plug>(MatchitNormalBackward)
+]d - Jump to the next diagnostic in the current buffer
+]D - Jump to the last diagnostic in the current buffer
+]q - :cnext
+]Q - :clast
+]<C-Q> - :cnfile
+]l - :lnext
+]L - :llast
+]<C-L> - :lnfile
+]a - :next
+]A - :last
+]t - :tnext
+]T - :tlast
+]<C-T> - :ptnext
+]b - :bnext
+]B - :blast
+]<Space> - Add empty line below cursor
+]% - <Plug>(MatchitNormalMultiForward)
+[d - Jump to the previous diagnostic in the current buffer
+[D - Jump to the first diagnostic in the current buffer
+[q - :cprevious
+[Q - :crewind
+[<C-Q> - :cpfile
+[l - :lprevious
+[L - :lrewind
+[<C-L> - :lpfile
+[a - :previous
+[A - :rewind
+[t - :tprevious
+[T - :trewind
+[<C-T> - :ptprevious
+[b - bprevious
+[B - brewind
+[<Space> - Add empty line above cursor
+[% - <Plug>(MatchitNormalMultiBackward)
+Y - :help Y-default
+& - :help &-default
+% - <Plug>(MatchitNormalForward)
+<Space>q - Open diagnostic [Q]uickfix list
+<Space>cp - [C]ode [P]ython
+<Space>f - [F]ormat buffer
+<Space>hf - git [H]unk [F]iles
+<Space>sh - [S]earch [H]elp
+<Space>sk - [S]earch [K]eymaps
+<Space>sf - [S]earch [F]iles
+<Space>ss - [S]earch [S]elect Telescope
+<Space>sw - [S]earch current [W]ord
+<Space>sg - [S]earch by [G]rep
+<Space>sd - [S]earch [D]iagnostics
+<Space>sr - [S]earch [R]esume
+<Space>s. - [S]earch Recent Files ("." for repeat)
+<Space><Space> - [ ] Find existing buffers
+<Space>/ - [/] Fuzzily search in current buffer
+<Space>s/ - [S]earch [/] in Open Files
+<Space>sn - [S]earch [N]eovim files 
+<Esc> - <Cmd>nohlsearch<CR>
