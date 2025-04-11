@@ -24,11 +24,11 @@ NEWBIEVIM/
 ```
 ## Contents table:
 > You can skip parts, it is mostly for `first-timer`
-* [WSL SETUP](#wsl-setup) `Windows Subsystem for Linux`
+* [WSL SETUP](/docs/wsl-setup.md) `Windows Subsystem for Linux`
 * [QUICK TRICK FOR WSL USERS](#quick-access-to-wsl-files)
 * [PREREQUISITES](#prerequisites)
-* [GIT SETUP](#git-setup)
-* [NEOVIM](#neovim)
+* [GIT SETUP](/git-github-setup.md)
+* [NEOVIM](/neovim-setup.md)
 
 ## WSL SETUP
 Windows Subsystem for Linux allows you to run a Linux environment directly on Windows without a virtual machine.
