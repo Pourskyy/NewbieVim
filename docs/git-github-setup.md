@@ -95,7 +95,7 @@ git pull origin master
 > Two possibilities:
 > **HTTPS** | **SSH**
 #### GH CLI
-> To understand the process you can follow: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+> To understand the process you can follow [GitHub Documentation](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
 Copy and paste it in Ubuntu `CMD`:
 ```bash
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
@@ -179,7 +179,7 @@ gh release create TAG_NAME
 #### SSH
 Go at the root cd ~
 - **Step 1**: Creating an SSH key
-> An SSH key is like a special digital house key that lets your computer securely talk to GitHub without typing your password every time.
+> An SSH key is like a special digital house key that lets your computer securely talk to GitHub without typing your password every time
 ```bash
 bashCopyssh-keygen -t ed25519 -C "your_email@example.com"
 ```
@@ -188,7 +188,7 @@ It will ask where to save the key - just press Enter to accept the default locat
 It will ask for a password - you can leave it blank by pressing Enter twice (though a password adds extra security)
 
 - **Step 2**: Starting the key manager
-This part tells your computer to keep track of your new digital key.
+> This part tells your computer to keep track of your new digital key
 ```bash
 bashCopyeval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
@@ -197,20 +197,23 @@ This start a program called "SSH agent" that manages your keys
 Tell the agent about your new key so it can use it
 
 - **Step 3**: Viewing your public key
-This step lets you see the public part of your key (the part you'll share with GitHub).
+This step lets you see the public part of your key (the part you'll share with GitHub)
 ```bash
 bashCopycat ~/.ssh/id_ed25519.pub
 ```
-Shows the content of your public key file
-You'll see a long string of text that starts with "ssh-ed25519" and ends with your email
-This is what you'll copy to paste into GitHub in the next step
+Shows the content of your public key file  
+You'll see a long string of text that starts with "ssh-ed25519" and ends with your email  
+This is what you'll copy to paste into GitHub in the next step  
 
-Think of it like this: You're creating a special lock and key. You keep the private key (id_ed25519) secret on your computer, while sharing the matching public lock (id_ed25519.pub) with GitHub so only your computer can access your account.
+Think of it like this: You're creating a special lock and key  
+You keep the private key (id_ed25519) secret on your computer  
+while sharing the matching public lock (id_ed25519.pub)  
+With GitHub so only your computer can access your account  
 Add the SSH key to your GitHub account:
 
-- **Step 4**: Go to GitHub → Settings → SSH and GPG keys
-Click "New SSH key"
-Paste your copied key and save
+- **Step 4**: Go to GitHub → Settings → SSH and GPG keys  
+Click "New SSH key"  
+Paste your copied key and save  
 
 - **Step 5**: Test your connection:
 
@@ -225,6 +228,7 @@ git config --global user.email "your_email@example.com"
 Now you can clone repositories using SSH URLs and push/pull without entering your password each time.
 
 ✅ Ensure Git is Configured to Use SSH
-Set Git to use SSH instead of HTTPS:
+```bash
 git config --global url."git@github.com:"
-**NOT** "https://github.com/"
+```
+> **NOT** "https://github.com/"
