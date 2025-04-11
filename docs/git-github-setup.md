@@ -96,7 +96,7 @@ git pull origin master
 > **HTTPS** | **SSH**
 #### GH CLI
 > To understand the process you can follow [GitHub Documentation](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
-Copy and paste it in Ubuntu `CMD`:
+> Copy and paste it in Ubuntu `CMD`:
 ```bash
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -126,7 +126,7 @@ gh auth login
 - Open a browser on another device (like your phone or another computer)
 - Go to https://github.com/login/device
 - Enter the one-time code shown (XXXX-XXXX)
-- Authorize the CLI
+- Authorize the CLI  
 DONE!
 ##### Now let's see how to manage repository
 List your repositories
@@ -176,16 +176,16 @@ Create a release
 ```bash
 gh release create TAG_NAME
 ```
-#### SSH
-Go at the root cd ~
+### SSH
+Go at the root `cd ~`  
 - **Step 1**: Creating an SSH key
 > An SSH key is like a special digital house key that lets your computer securely talk to GitHub without typing your password every time
 ```bash
 bashCopyssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-Replace "your_email@example.com" with the email you use for GitHub
-It will ask where to save the key - just press Enter to accept the default location
-It will ask for a password - you can leave it blank by pressing Enter twice (though a password adds extra security)
+Replace "your_email@example.com" with the email you use for GitHub  
+It will ask where to save the key   -	just press Enter to accept the default location  
+It will ask for a password	    -	you can leave it blank by pressing Enter twice (though a password adds extra security)  
 
 - **Step 2**: Starting the key manager
 > This part tells your computer to keep track of your new digital key
@@ -193,25 +193,20 @@ It will ask for a password - you can leave it blank by pressing Enter twice (tho
 bashCopyeval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
-This start a program called "SSH agent" that manages your keys
-Tell the agent about your new key so it can use it
+This start a program called "SSH agent" that manages your keys  
+Tell the agent about your new key so it can use it  
 
 - **Step 3**: Viewing your public key
 This step lets you see the public part of your key (the part you'll share with GitHub)
 ```bash
 bashCopycat ~/.ssh/id_ed25519.pub
 ```
-Shows the content of your public key file  
-You'll see a long string of text that starts with "ssh-ed25519" and ends with your email  
-This is what you'll copy to paste into GitHub in the next step  
+Shows the content of your public key file you'll see a long string of text that starts with "ssh-ed25519" and ends with your email this is what you'll copy to paste into GitHub in the next step  
 
-Think of it like this: You're creating a special lock and key  
-You keep the private key (id_ed25519) secret on your computer  
-while sharing the matching public lock (id_ed25519.pub)  
-With GitHub so only your computer can access your account  
-Add the SSH key to your GitHub account:
+Think of it like this: You're creating a special lock and key you keep the private key (id_ed25519) secret on your computer while sharing the matching public lock (id_ed25519.pub) with GitHub so only your computer can access your account  
+> Add the SSH key to your GitHub account:
 
-- **Step 4**: Go to GitHub → Settings → SSH and GPG keys  
+- **Step 4**: `Go to GitHub → Settings → SSH and GPG keys`  
 Click "New SSH key"  
 Paste your copied key and save  
 
