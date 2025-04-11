@@ -83,3 +83,97 @@ Create a release
 gh release create TAG_NAME
 ```
 #### SSH
+## GIT SETUP
+
+### Basic Configuration
+> Inside WSL in Ubuntu `CMD`\
+> You may want to use your github `EMAIL`
+> - Go to GitHub → Settings → Emails
+> - Look for something like: your-github-username@users.noreply.github.com
+```bash
+# Set username and email
+git config --global user.name "name"
+git config --global user.email "email"
+
+# Verify configuration
+git config --get user.name
+git config --get user.email
+
+# Remove configuration settings if needed
+git config --unset key    # Remove single setting
+git config --unset-all key    # Remove all instances
+
+# View all Git configurations
+cat ~/.gitconfig
+
+# Set default branch name
+git config --global init.defaultBranch master
+# Set main for GitHub
+git config --global init.defaultBranch main
+```
+
+### Configuration Levels
+Git has four configuration levels, each overriding the previous one:
+
+1. **System** (`/etc/gitconfig`): configures Git for all users on the system
+2. **Global** (`~/.gitconfig`): configures Git for all projects of a user
+3. **Local** (`.git/config`): configures Git for a specific project
+4. **Worktree** (`.git/config.worktree`): configures Git for part of a project
+
+### Creating and Managing a Repository
+```bash
+# Create and initialize a new repository
+mkdir project-name
+cd project-name
+git init
+
+# Check repository status
+git status
+```
+
+#### Understanding File States
+- **Untracked**: Not being tracked by Git
+- **Staged**: Marked for inclusion in the next commit
+- **Committed**: Saved to the repository's history
+
+### Committing Changes
+> Inside WSL in Ubuntu `CMD`
+```bash
+# Add specific file to staging
+git add filename.txt
+
+# Add all untracked/modified files
+git add .
+
+# Commit staged changes
+git commit -m "Your descriptive message"
+
+# Update the most recent commit
+git commit --amend -m "Updated commit message"
+```
+
+### Viewing History
+```bash
+# View commit history
+git log
+
+# View limited number of commits without pager
+git log -n 5 --no-pager
+```
+
+### Working with Remotes
+```bash
+# Add a remote repository FOR GITHUB CLI
+git remote add origin https://github.com/username/repository.git
+
+# Add a remote repository FOR GIT
+git remote add origin git@github.com:username/repository.git
+
+# Push to remote repository
+git push -u origin master
+
+# Pull from remote repository
+git pull origin master
+```
+
+

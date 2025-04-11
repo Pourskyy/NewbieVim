@@ -22,14 +22,18 @@ NEWBIEVIM/
     ├── setup-wsl.sh           # Automation script for WSL setup
     └── install-deps.sh        # Script to install dependencies
 ```
-## Contents table:
+## 📚 Detailed Guides:
 > You can skip parts, it is mostly for `first-timer`
-* [WSL SETUP](/docs/wsl-setup.md) `Windows Subsystem for Linux`
+* [WSL Setup & Shortcuts](/docs/wsl-setup.md) `Windows Subsystem for Linux`
+* [Ubuntu Basics & Prerequisites](/docs/ubuntu-basics.md)
 * [QUICK TRICK FOR WSL USERS](#quick-access-to-wsl-files)
-* [PREREQUISITES](#prerequisites)
-* [GIT SETUP](/git-github-setup.md)
-* [NEOVIM](/neovim-setup.md)
+* [Git & GitHub Configuration](/git-github-setup.md)
+* [Neovim Setup & Plugins](/neovim-setup.md)
 
+## 🔧 Programming Languages:
+* [Python Environment](/docs/language-guides/python-setup.md)
+* [Node.js & npm](/docs/language-guides/nodejs-setup.md)
+* [Rust Development](/docs/language-guides/rust-setup.md)
 ## WSL SETUP
 Windows Subsystem for Linux allows you to run a Linux environment directly on Windows without a virtual machine.
 
