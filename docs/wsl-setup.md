@@ -1,4 +1,4 @@
-## WSL SETUP
+## WSL
 Windows Subsystem for Linux allows you to run a Linux environment directly on Windows without a virtual machine.
 
 ### Installation

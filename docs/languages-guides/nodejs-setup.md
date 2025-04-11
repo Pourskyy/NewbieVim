@@ -1,6 +1,7 @@
 ### Node.js and NPM Setup
 
-Many Neovim plugins require Node.js and npm (Node Package Manager).
+> Many Neovim plugins require Node.js and npm (Node Package Manager)  
+> Inside WSL / Ubuntu `CMD`  
 
 #### Checking Node.js Installation
 ```bash
@@ -21,7 +22,7 @@ sudo apt install nodejs npm
 ```
 
 #### Configuring npm Global Installation Path
-This avoids permission issues when installing global packages:
+> This avoids permission issues when installing global packages  
 
 ```bash
 # Create directory for global packages
@@ -38,7 +39,7 @@ source ~/.bashrc
 ```
 
 #### Installing npm Packages
-You can install packages globally or locally to a project:
+> You can install packages globally or locally to a project  
 
 ```bash
 # Install packages globally (available system-wide)
@@ -55,7 +56,7 @@ npm install package_name --save
 ```
 
 #### Node.js for Neovim Plugins
-Many Neovim plugins require the Neovim Node.js provider:
+> Many Neovim plugins require the Neovim Node.js provider  
 
 ```bash
 # Install Neovim Node.js provider
@@ -64,4 +65,4 @@ npm install -g neovim
 # Verify installation in Neovim
 :checkhealth
 ```
-Look for the **Node.js provider** status in the health check output.
+Look for the **Node.js provider** status in the health check output

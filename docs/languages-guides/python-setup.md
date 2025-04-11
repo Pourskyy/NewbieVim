@@ -1,8 +1,9 @@
 ### Python Setup
 
-After installing Neovim, you'll need to set up Python for various plugins and development tasks.
+After installing Neovim, feel free to set up Python  
 
 #### Checking Python Installation
+> Inside WSL / Ubuntu `CMD`  
 ```bash
 # Verify Python version
 python3 --version
@@ -13,7 +14,7 @@ which python3
 ```
 
 #### Creating a Python Virtual Environment
-Virtual environments let you manage Python packages separately for different projects.
+> Virtual environments let you manage Python packages separately for different projects  
 
 ```bash
 # Install necessary packages
@@ -40,6 +41,7 @@ source ~/.bashrc
 ```
 
 #### Verifying Neovim Python Integration
+> Look for the **python / pip / venv** status
 ```bash
 # Open Neovim
 nvim
@@ -47,10 +49,9 @@ nvim
 # Check Neovim health
 :checkhealth
 ```
-Look for the **python / pip / venv** status in the health check output.
 
 #### Installing Python Packages
-You can install packages either from the terminal or within Neovim:
+> You can install packages either from the terminal or within Neovim `CMD`
 
 ```bash
 # Install packages from terminal

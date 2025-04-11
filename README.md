@@ -30,7 +30,7 @@ NEWBIEVIM/
 * [Neovim Setup & Plugins](/docs/neovim-setup.md)
 
 ## 🔧 Programming Languages:
-> **Note**: You don't need to install all of these languages and tools at once. Start with the ones needed for your immediate tasks, and add others as needed.
+> `**Note**:` You don't need to install all of these languages and tools at once. Start with the ones needed for your immediate tasks, and add others as needed.
 * [Python Environment](/docs/languages-guides/python-setup.md)
 * [Node.js & npm](/docs/languages-guides/nodejs-setup.md)
 * [Rust Development](/docs/languages-guides/rust-setup.md)

@@ -1,5 +1,16 @@
-## Prerequisites
+## UBUNTU BASICS
+> Basics commands to use Ubuntu  
+> Inside WSL / Ubuntu `CMD`:
+```bash
+# To create and open files
+nano
+touch file.txt
+cat > file.txt
+echo "Hello World" > file.txt
+printf "First line of text\nSecond line of text\n" > file.txt
+```
 
+## Prerequisites
 Before we begin setting up Neovim and Git, we need to install some essential tools and dependencies.
 
 ### Basic Tools Installation
@@ -29,5 +40,4 @@ Neovim and its plugins often require additional programming languages and tools.
 sudo apt install luarocks
 
 ```
-
 

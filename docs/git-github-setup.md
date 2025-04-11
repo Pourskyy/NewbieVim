@@ -90,6 +90,7 @@ git push -u origin master
 # Pull from remote repository
 git pull origin master
 ```
+> The git push -u origin master command sets up the local branch to track the remote master branch, simplifying future pushes and pulls  
 
 ### GITHUB
 > Two possibilities:
@@ -183,9 +184,9 @@ Go at the root `cd ~`
 ```bash
 bashCopyssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-Replace "your_email@example.com" with the email you use for GitHub  
-It will ask where to save the key   -	just press Enter to accept the default location  
-It will ask for a password	    -	you can leave it blank by pressing Enter twice (though a password adds extra security)  
+Replace "your_email@example.com" with the email you use for GitHub 
+- KeyPath: press `Enter` to accept the default location  
+- Password: press `Enter` twice to leave blank password  
 
 - **Step 2**: Starting the key manager
 > This part tells your computer to keep track of your new digital key
@@ -193,11 +194,11 @@ It will ask for a password	    -	you can leave it blank by pressing Enter twice 
 bashCopyeval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
-This start a program called "SSH agent" that manages your keys  
-Tell the agent about your new key so it can use it  
+> Start a program called "SSH agent" that manages your keys  
+> Tell the agent about your new key so it can use it  
 
-- **Step 3**: Viewing your public key
-This step lets you see the public part of your key (the part you'll share with GitHub)
+- **Step 3**: Viewing your public key  
+> This step lets you see the public part of your key (the part you'll share with GitHub)
 ```bash
 bashCopycat ~/.ssh/id_ed25519.pub
 ```
@@ -207,10 +208,10 @@ Think of it like this: You're creating a special lock and key you keep the priva
 > Add the SSH key to your GitHub account:
 
 - **Step 4**: `Go to GitHub → Settings → SSH and GPG keys`  
-Click "New SSH key"  
+Click `New SSH key`  
 Paste your copied key and save  
 
-- **Step 5**: Test your connection:
+- **Step 5**: Test your connection  
 
 ```bash
 bashCopyssh -T git@github.com
@@ -226,4 +227,17 @@ Now you can clone repositories using SSH URLs and push/pull without entering you
 ```bash
 git config --global url."git@github.com:"
 ```
-> **NOT** "https://github.com/"
+> **NOT** "https://github.com/"  
+> Don't forget to use GitHub email:  
+> Go to GitHub → Settings → Emails  
+> Look for something like:  
+> `your-github-username@users.noreply.github.com`
+```bash
+git config --global user.email
+# "xxxx@users.noreply.github.com"
+```
+
+In case you need to change your author's email Inside the project  
+```bash
+git commit --amend --reset-author
+```
