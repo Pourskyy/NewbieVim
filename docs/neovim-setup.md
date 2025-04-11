@@ -1,5 +1,5 @@
 ## NEOVIM
-> **Note**: for clarity, all the shortcuts and keymaping will be inside [`keymaps.txt`](#keymaps.txt)
+> **Note**: for clarity, all the shortcuts and keymaping will be inside [`keymaps.txt`](keymaps.txt)
 
 **Basic Usage**
 
