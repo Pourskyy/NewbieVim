@@ -26,9 +26,8 @@ NEWBIEVIM/
 > You can skip parts, it is mostly for `first-timer`
 * [WSL Setup & Shortcuts](/docs/wsl-setup.md) `Windows Subsystem for Linux`
 * [Ubuntu Basics & Prerequisites](/docs/ubuntu-basics.md)
-* [QUICK TRICK FOR WSL USERS](#quick-access-to-wsl-files)
-* [Git & GitHub Configuration](/git-github-setup.md)
-* [Neovim Setup & Plugins](/neovim-setup.md)
+* [Git & GitHub Configuration](/docs/git-github-setup.md)
+* [Neovim Setup & Plugins](/docs/neovim-setup.md)
 
 ## 🔧 Programming Languages:
 > **Note**: You don't need to install all of these languages and tools at once. Start with the ones needed for your immediate tasks, and add others as needed.
