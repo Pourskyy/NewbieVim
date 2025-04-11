@@ -1,5 +1,5 @@
 # NewbieVim
-## STEP BY STEP NEOVIM & UBUNTU GUIDE
+> STEP BY STEP NEOVIM & UBUNTU GUIDE
 - Do not copy-paste comments in command line
 
 ```bash
@@ -10,7 +10,7 @@ NEWBIEVIM/
 │   ├── ubuntu-basics.md       # Ubuntu prerequisites and setup
 │   ├── git-github-setup.md    # Git and GitHub configuration
 │   ├── neovim-setup.md        # Neovim installation and plugins
-│   └── language-guides/       # Subdirectory for programming languages
+│   └── languages-guides/       # Subdirectory for programming languages
 │       ├── python-setup.md    # Python specific setup
 │       ├── nodejs-setup.md    # Node.js specific setup
 │       └── rust-setup.md      # Other languages as needed
@@ -31,9 +31,9 @@ NEWBIEVIM/
 * [Neovim Setup & Plugins](/neovim-setup.md)
 
 ## 🔧 Programming Languages:
-* [Python Environment](/docs/language-guides/python-setup.md)
-* [Node.js & npm](/docs/language-guides/nodejs-setup.md)
-* [Rust Development](/docs/language-guides/rust-setup.md)
+* [Python Environment](/docs/languages-guides/python-setup.md)
+* [Node.js & npm](/docs/languages-guides/nodejs-setup.md)
+* [Rust Development](/docs/languages-guides/rust-setup.md)
 ## WSL SETUP
 Windows Subsystem for Linux allows you to run a Linux environment directly on Windows without a virtual machine.
 
