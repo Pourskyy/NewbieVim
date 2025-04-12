@@ -21,7 +21,7 @@ NEWBIEVIM/
     ├── setup-wsl.sh           # Automation script for WSL setup
     └── install-deps.sh        # Script to install dependencies
 ```
-![RoadMap](/docs/1.png)
+![RoadMap](/docs/misc/1.png)
 ## 📚 Detailed Guides:
 > You can skip parts, it is mostly for `first-timer`
 * [WSL Setup & Shortcuts](/docs/wsl-setup.md) `Windows Subsystem for Linux`

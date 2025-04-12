@@ -76,6 +76,166 @@ git log
 git log -n 5 --no-pager
 ```
 
+### Working with Branches  
+> Checking Current Branch
+```bash
+# View which branch you're currently on
+git branch
+# Output will show something like: * master
+```
+
+> Default Branch Configuration
+```bash
+# Check your default branch name setting
+git config --global --get init.defaultbranch
+
+# Set your default branch name
+git config --global init.defaultBranch main
+```
+
+> Renaming Branches
+```bash
+# Rename the current branch (e.g., converting master to main for GitHub)
+git branch -m main
+```
+
+### Creating and Switching Branches
+
+> Creating Branches
+```bash
+# Create a new branch (but stay on current branch)
+git branch my_new_branch
+
+# Create a new branch using alternative syntax
+git branch -c my_new_branch
+```
+
+> Switching Between Branches
+```bash
+# Modern way to switch branches (Git 2.23+)
+git switch my_new_branch
+
+# Create and switch to a new branch in one command
+git switch -c my_new_branch
+
+# Traditional way to switch branches
+git checkout my_new_branch
+```
+
+### Viewing Branch History
+
+> Basic Log Commands
+```bash
+# View commit history with branch decoration
+git log --decorate=short  # Default decoration level
+git log --decorate=full   # Show full ref names
+git log --decorate=no     # No decoration
+
+# Condensed history view (one line per commit)
+git log --oneline
+```
+
+> Visual History Representation
+```bash
+# View branch history with graphical representation
+git log --oneline --graph --all
+```
+
+### Additional Log Options
+```bash
+# Show commit parents (useful for understanding merge history)
+git log --parents
+
+# Combine options for detailed visualization
+git log --oneline --graph --decorate --all
+```
+
+## Merging Branches
+
+### Merge Workflow
+Standard merging follows this pattern:
+
+1. Update your main branch
+   ```bash
+   git switch main
+   git pull origin main
+   ```
+
+2. Create a feature branch
+   ```bash
+   git switch -c a_cool_feature
+   ```
+
+3. Make changes, commit them
+   ```bash
+   # Make your changes...
+   git add .
+   git commit -m "Implement cool feature"
+   ```
+
+4. Merge changes back to main
+   ```bash
+   git switch main
+   git merge a_cool_feature
+   ```
+
+### Types of Merges
+
+#### Fast-Forward Merge
+When no additional work has been done on the main branch, Git performs a "fast-forward" merge:
+- Git simply moves the pointer to the latest commit
+- No new merge commit is created
+- History remains linear
+
+#### Merge Commit
+When both branches have unique commits, Git creates a merge commit:
+- New commit with two parents is created
+- Preserves the branch history
+- Creates a non-linear history
+
+### Resolving Merge Conflicts
+If changes in both branches modify the same part of a file:
+
+1. Git will pause the merge and indicate conflicts
+2. Edit the files to resolve conflicts
+3. Use `git add` to mark conflicts as resolved
+4. Complete the merge with `git commit`
+
+### Cleaning Up After Merging
+```bash
+# Delete branch after successful merge
+git branch -d a_cool_feature
+
+# Force delete unmerged branch (use with caution)
+git branch -D a_cool_feature
+```
+
+## Advanced Branch Management
+
+### Comparing Branches
+```bash
+# See what commits are in feature branch that aren't in main
+git log main..feature_branch
+
+# Compare file differences between branches
+git diff main feature_branch
+```
+
+### Stashing Changes
+```bash
+# Temporarily store uncommitted changes before switching branches
+git stash
+
+# Apply stashed changes later
+git stash pop
+```
+
+### Cherry-Picking
+```bash
+# Apply a specific commit from another branch
+git cherry-pick commit_hash
+```
+
 ### Working with Remotes
 ```bash
 # Add a remote repository FOR GITHUB CLI
@@ -101,8 +261,8 @@ git pull origin master
 ```bash
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
-    && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
-    && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+	&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+	&& cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
 	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& sudo apt update \
@@ -128,6 +288,7 @@ gh auth login
 - Go to https://github.com/login/device
 - Enter the one-time code shown (XXXX-XXXX)
 - Authorize the CLI  
+  
 DONE!
 ##### Now let's see how to manage repository
 List your repositories
@@ -228,6 +389,7 @@ Now you can clone repositories using SSH URLs and push/pull without entering you
 git config --global url."git@github.com:"
 ```
 > **NOT** "https://github.com/"  
+  
 > Don't forget to use GitHub email:  
 > Go to GitHub → Settings → Emails  
 > Look for something like:  
