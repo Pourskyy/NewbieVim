@@ -41,7 +41,8 @@ which pip
 # If it shows /usr/bin/pip or similar, the virtual environment isn't activated
 ```
 #### Activating the Environment Automatically
-> [!WARNING] CAREFUL LOADING AUTOMATICALLY IT MAY CAUSE ERRORS  
+> [!WARNING] 
+> CAREFUL LOADING AUTOMATICALLY IT MAY CAUSE ERRORS  
 ```bash
 # Add activation command to your bashrc
 echo 'source ~/.config/py_env/default_env/bin/activate' >> ~/.bashrc
