@@ -37,7 +37,7 @@ source ~/.bashrc
 #### Installing Node Version Manager (nvm)
 
 > [!WARNING]
-> [NVM is the recommended way to install and manage Node.js in `UBUNTU`
+> `NVM` is the *recommended* way to install and manage Node.js in `UBUNTU`
 
 ```bash
 # Install nvm
