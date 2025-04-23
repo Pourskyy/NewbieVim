@@ -29,9 +29,10 @@ sudo apt install -y neovim
 nvim --version
 ```
 > [!NOTE]  
-> If you want to start with the kickstarter you need to have the version 0.10  
-> In case you are below follow thise steps:  
+> If you want to start with the kickstarter you need `version 0.10`  
+> To upgrade  
 ```bash
+# adds the Neovim unstable PPA to your system, allowing you to install the latest development version of Neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim
