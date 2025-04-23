@@ -28,6 +28,23 @@ sudo apt install -y neovim
 # Verify Neovim installation
 nvim --version
 ```
+> [!NOTE]  
+> If you want to start with the kickstarter you need to have the version 0.10  
+> In case you are below follow thise steps:  
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt install neovim
+
+# To add the kickstarter
+git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+```
+You can finally start using neovim by typing `nvim`  
+> `:` is the shortcut to access the command inside `Neovim`  
+```bash
+nvim
+:checkhealth
+```
 
 ### Programming Languages and Dependencies
 > Inside WSL in Ubuntu `CMD`
@@ -41,3 +58,4 @@ sudo apt install luarocks
 
 ```
 
+Check [Neovim Setup & Plugins](/docs/neovim-setup.md) to follow up with Neovim use
