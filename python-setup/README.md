@@ -1,6 +1,4 @@
 # Python modelling model
-> Initializing the project  
-
 ```
 my_project/  
 │  
@@ -16,7 +14,9 @@ my_project/
 └── .gitignore  
 ```
   
-To start the project:  
+To start the project  
+> Initializing the project
+    
 ```bash
 mkdir my_project
 cd my_project
