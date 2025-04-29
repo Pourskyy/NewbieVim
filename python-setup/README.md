@@ -117,7 +117,8 @@ Now activate the hooks
 ```bash
 pre-commit install
 ```
-> [!NOTE] Now every time you git commit, these checks will run automatically  
+> [!NOTE]
+> Now every time you git commit, these checks will run automatically  
 > If code isn’t formatted properly or type hints are wrong, the commit will fail until you fix it  
   
 > You can manually run checks too  
@@ -126,8 +127,8 @@ pre-commit run --all-files
 ```
   
 *EXPLANATION*  
-`.venv/`                           &rarr; A local Python Environment (isolated from system)  
-`pyproject.toml`                   &rarr; Defines dependencies and configures code styles tools  
-`.pre-commit-config.yaml`          &rarr; Defines automated checks that trigger before each commit  
-`pre-commit`                       &rarr; The tool that runs hooks automatically before each commit  
+`.venv/` &rarr; &rarr; &rarr; &rarr; &rarr; A local Python Environment (isolated from system)  
+`pyproject.toml` &rarr; &rarr; &rarr; &rarr; Defines dependencies and configures code styles tools  
+`.pre-commit-config.yaml` &rarr; &rarr; &rarr; Defines automated checks that trigger before each commit  
+`pre-commit` &rarr; &rarr; &rarr; &rarr; &rarr; The tool that runs hooks automatically before each commit  
 `black`, `flake8`, `mypy`, `isort` &rarr; Tools to format, lint, type-check and sort imports  
